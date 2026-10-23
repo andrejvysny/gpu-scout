@@ -1,0 +1,9 @@
+{
+  "server": "pectra",
+  "slack_channel": "C0123456789",
+  "slack_poll_interval": "15s",
+  "gpu_poll_interval": "30s",
+  "idle_period": "2m",
+  "max_utilization": 5,
+  "max_memory_mib": 512
+}

@@ -1,0 +1,31 @@
+{
+  "display_information": {
+    "name": "GPU Scout",
+    "description": "On-demand GPU availability and training completion alerts",
+    "background_color": "#253340"
+  },
+  "features": {
+    "slash_commands": [
+      {
+        "command": "/scout",
+        "description": "GPU status, one-time idle watches, and usage help",
+        "usage_hint": "help | status dencun | arm dencun gpu=0 expires=10m | watches dencun | cancel dencun watch=ID",
+        "should_escape": false
+      }
+    ],
+    "bot_user": {
+      "display_name": "GPU Scout",
+      "always_online": false
+    }
+  },
+  "oauth_config": {
+    "scopes": {
+      "bot": ["channels:history", "groups:history", "chat:write", "commands"]
+    }
+  },
+  "settings": {
+    "org_deploy_enabled": false,
+    "socket_mode_enabled": true,
+    "token_rotation_enabled": false
+  }
+}

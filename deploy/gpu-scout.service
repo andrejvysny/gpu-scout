@@ -1,0 +1,16 @@
+[Unit]
+Description=GPU Scout monitoring and Slack notifications
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/gpu-scout -config %h/.config/gpu-scout/config.json serve
+EnvironmentFile=%h/.config/gpu-scout/environment
+Restart=on-failure
+RestartSec=15
+UMask=0077
+NoNewPrivileges=yes
+
+[Install]
+WantedBy=default.target
